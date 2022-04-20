@@ -7,7 +7,7 @@ import { DataTypes } from 'sequelize'
     
 
     nombre: {type: DataTypes.STRING},
-    estudianteId: {type: DataTypes.INTEGER},
+   estudianteId: {type: DataTypes.INTEGER},
    asignaturaId: {type: DataTypes.INTEGER}
 })
 
