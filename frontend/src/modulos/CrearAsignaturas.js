@@ -32,7 +32,7 @@ const CrearAsignaturas = () => {
             <div className="col-11">
             <h1> Crear Estudiante </h1>
             
-        <form onSubmit={guardar} className="boreder" >
+        <form onSubmit={guardar} >
             <div>
             <div className='col-6 mb-4'>
                 <label className="mb-3"> Nombre </label>
