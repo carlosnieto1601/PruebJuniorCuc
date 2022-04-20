@@ -29,7 +29,7 @@ const EditarEstudiante= () => {
 
    useEffect(() => {
     getEstudiantesById()
-},[]);
+});
 
 const getEstudiantesById=  async (e) => {
    const res =  await axios.get(URI+id)

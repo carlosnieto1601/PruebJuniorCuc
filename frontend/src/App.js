@@ -9,6 +9,7 @@ import EditarEstudiante from './modulos/EditarEstudiante.js';
 import ConsumirApi from './modulos/ConsumirApi.js';
 import AgregarClase from './modulos/AgregarClase.js';
 import MostrarAsignatura from './modulos/MostrarAsignatura.js';
+import CrearAsignaturas from './modulos/CrearAsignaturas.js';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
     <div>  
       <Fragment>
       <Navbar brand="Prueba Junior" api="Mostar Api" 
-      asignatura=" Agregar Asignatura" clase="Agregar Clases" />
+      asignatura="Asignaturas" clase=" Clases" />
       <BrowserRouter>
         <Routes>
           <Route  path='/' element= {<MostrarEstudiantes/>} />
@@ -25,7 +26,7 @@ function App() {
           <Route path='/consumir' element= {<ConsumirApi/>} />
           <Route path='/asignatura' element= {<MostrarAsignatura/>} />
           <Route path='/clase' element= {<AgregarClase/>} />
-
+          <Route path='/crear' element= {<CrearAsignaturas/>} />
         </Routes>
       </BrowserRouter>
       </Fragment>
