@@ -7,7 +7,9 @@ import { DataTypes } from 'sequelize'
 
     nombre: {type: DataTypes.STRING},
     salon: {type: DataTypes.STRING},
-    horario: {type: DataTypes.STRING}
+    horario: {type: DataTypes.STRING},
+    profesorId: {type: DataTypes.INTEGER}
+    
 })
 
 export default ModeloAsignaturas;

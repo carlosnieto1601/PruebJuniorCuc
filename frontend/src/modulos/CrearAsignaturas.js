@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const URI = "http://localhost:8000/asignaturas/";
-
+// const URI1 = "http://localhost:8000/profesores/";
 const CrearAsignaturas = () => {
   const [nombre, setnombre] = useState("");
   const [salon, setsalon] = useState("");
@@ -30,7 +30,7 @@ const CrearAsignaturas = () => {
     <div className="container">
         <div className="row">
             <div className="col-11">
-            <h1> Crear Estudiante </h1>
+            <h1> Crear Asignatura </h1>
             
         <form onSubmit={guardar} className='formulario'>
             <div>
