@@ -6,11 +6,11 @@ import { DataTypes } from 'sequelize'
 
 const Models = db.define('estudiantes', {
 
-    Nombre: {type: DataTypes.STRING},
-    Apellido: {type: DataTypes.STRING},
-    Numero_de_identificacion: {type: DataTypes.STRING},
-    Correo: {type: DataTypes.STRING},
-    ProgramaAcademico: {type: DataTypes.STRING},
+    nombre: {type: DataTypes.STRING},
+    apellido: {type: DataTypes.STRING},
+    cedula: {type: DataTypes.STRING},
+    correo: {type: DataTypes.STRING},
+    programaacademico: {type: DataTypes.STRING}
 })
  
 
