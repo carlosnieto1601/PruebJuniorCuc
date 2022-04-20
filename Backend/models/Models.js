@@ -12,7 +12,5 @@ const Models = db.define('estudiantes', {
     correo: {type: DataTypes.STRING},
     programaacademico: {type: DataTypes.STRING}
 })
- 
-
 
 export default Models;

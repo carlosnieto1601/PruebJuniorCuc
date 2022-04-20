@@ -7,8 +7,8 @@ import { BrowserRouter, Routes,Route } from "react-router-dom";
 import CrearEstudiantes from './modulos/CrearEstudiantes.js';
 import EditarEstudiante from './modulos/EditarEstudiante.js';
 import ConsumirApi from './modulos/ConsumirApi.js';
-import AgregarAsignatura from './modulos/AgregarAsignatura.js';
 import AgregarClase from './modulos/AgregarClase.js';
+import MostrarAsignatura from './modulos/MostrarAsignatura.js';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path='/create' element= {<CrearEstudiantes/>} />
           <Route path='/edit/:id/' element= {<EditarEstudiante/>} />
           <Route path='/consumir' element= {<ConsumirApi/>} />
-          <Route path='/asignatura' element= {<AgregarAsignatura/>} />
+          <Route path='/asignatura' element= {<MostrarAsignatura/>} />
           <Route path='/clase' element= {<AgregarClase/>} />
 
         </Routes>

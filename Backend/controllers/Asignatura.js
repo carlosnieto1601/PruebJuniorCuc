@@ -1,15 +1,15 @@
-import Models from "../models/Models.js";
+import ModeloAsignaturas from "../models/ModeloAsignaturas.js"
 
 
 
 
-export const getAllestudiantes= async (req,res) =>{
+export const getAllasignaturas= async (req,res) =>{
 
     
     try{    
 
-        const estudiantes = await Models.findAll()
-        res.json(estudiantes)
+        const asignaturas = await ModeloAsignaturas.findAll()
+        res.json(asignaturas)
 
 }catch(error){
 
@@ -20,14 +20,14 @@ export const getAllestudiantes= async (req,res) =>{
 
 // mostrar un solo registro 
 
-export const getAllestudiante = async (req,res) => {
+export const getAllAsignatura = async (req,res) => {
 
     try{    
 
-        const estudiante = await Models.findAll({
+        const asignaturas = await ModeloAsignaturas.findAll({
             where:{id:req.params.id}
         })
-        res.json(estudiante)
+        res.json(asignaturas)
 
 }catch(error){
 
@@ -37,9 +37,9 @@ export const getAllestudiante = async (req,res) => {
 
 // crear registro 
 
-export const crearestudiante = async (req,res) =>{
+export const crearAsignatura = async (req,res) =>{
     try {
-        await Models.create(req.body)
+        await ModeloAsignaturas.create(req.body)
         res.json({
             "message":"Resgistro creado correctamente"
         })
@@ -47,11 +47,11 @@ export const crearestudiante = async (req,res) =>{
         res.json({message: error.message})
     }
 }
-export const actualizarestudiante = async (req,res) =>{
+export const actualizarAsignatura = async (req,res) =>{
 
     try{    
 
-       await Models.update(req.body,{
+       await ModeloAsignaturas.update(req.body,{
            where: {id:req.params.id}
        })
         res.json({
@@ -64,14 +64,13 @@ export const actualizarestudiante = async (req,res) =>{
 }
 
 }
-
 // Eliminar un registro
 
-export const eliminarestudiante = async (req,res) =>{
+export const eliminarasignatura = async (req,res) =>{
 
     try{    
 
-       await Models.destroy({
+       await ModeloAsignaturas.destroy({
            where: {id:req.params.id}
        })
         res.json({
