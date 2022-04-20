@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const URI = "http://localhost:8000/asignaturas/";
- const URI1 = "http://localhost:8000/profesores";
-const MostrarAsignatura = () => {
+const URI1 = "http://localhost:8000/profesores/";
+
+ const MostrarAsignatura = () => {
 
   const [asignaturas, setAsignaturas] = useState([]);
   useEffect(() => {
@@ -53,13 +54,15 @@ const deleteasignaturas = async (id) => {
             </thead>
             <tbody>
 
-                {asignaturas.map((asignatura)=>(
+                {asignaturas.map((asignatura)=> (
+                  
                     <tr key={asignatura.id}>
                     <td>{asignatura.id}</td>
                     <td>{asignatura.nombre}</td>
                     <td>{asignatura.salon}</td>
                     <td>{asignatura.horario}</td>
-                    <t> {asignatura.profesor}</t>
+                    {/* <td>{asignatura.profesores.id}</td> */}
+                   
                     <td>{profesores.map((profesor) =>(
                         <td>{profesor.nombre}</td>
                     ))}

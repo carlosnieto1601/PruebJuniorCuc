@@ -26,7 +26,7 @@ function App() {
           <Route path='/edit/:id/' element= {<EditarEstudiante/>} />
           <Route path='/consumir' element= {<ConsumirApi/>} />
           <Route path='/asignatura' element= {<MostrarAsignatura/>} />
-          {/* <Route path='/clase' element= {<AgregarClase/>} /> */}
+          <Route path='/agregar' element= {<AgregarClase/>} />
           <Route path='/crear' element= {<CrearAsignaturas/>} />
           <Route path='/clase' element= {<MostrarClases/>} />
 
