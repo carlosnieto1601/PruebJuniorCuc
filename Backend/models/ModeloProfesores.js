@@ -7,7 +7,10 @@ import { DataTypes } from 'sequelize'
 
     nombre: {type: DataTypes.STRING},
     apellido: {type: DataTypes.STRING},
-    profesorId: {type: DataTypes.INTEGER}
+    profesorId: {type: DataTypes.INTEGER,
+        references:'ModeloAsignaturas',
+        key:'id'
+    }
 
 })
 
