@@ -1,15 +1,12 @@
-import Models from "../models/Models.js";
+import ModeloProfesores from "../models/ModeloProfesores.js";
 
-
-
-
-export const getAllestudiantes= async (req,res) =>{
+export const getAllprofesores= async (req,res) =>{
 
     
     try{    
 
-        const estudiantes = await Models.findAll()
-        res.json(estudiantes)
+        const profesores = await ModeloProfesores.findAll()
+        res.json(profesores)
 
 }catch(error){
 
@@ -20,14 +17,14 @@ export const getAllestudiantes= async (req,res) =>{
 
 // mostrar un solo registro 
 
-export const getAllestudiante = async (req,res) => {
+export const getAllprofesor = async (req,res) => {
 
     try{    
 
-        const estudiante = await Models.findAll({
+        const profesores = await ModeloProfesores.findAll({
             where:{id:req.params.id}
         })
-        res.json(estudiante)
+        res.json(profesores)
 
 }catch(error){
 
@@ -37,9 +34,9 @@ export const getAllestudiante = async (req,res) => {
 
 // crear registro 
 
-export const crearestudiante = async (req,res) =>{
+export const crearprofesor = async (req,res) =>{
     try {
-        await Models.create(req.body)
+        await ModeloProfesores.create(req.body)
         res.json({
             "message":"Resgistro creado correctamente"
         })
@@ -47,11 +44,11 @@ export const crearestudiante = async (req,res) =>{
         res.json({message: error.message})
     }
 }
-export const actualizarestudiante = async (req,res) =>{
+export const actualizarprofesor = async (req,res) =>{
 
     try{    
 
-       await Models.update(req.body,{
+       await ModeloProfesores.update(req.body,{
            where: {id:req.params.id}
        })
         res.json({
@@ -64,14 +61,13 @@ export const actualizarestudiante = async (req,res) =>{
 }
 
 }
-
 // Eliminar un registro
 
-export const eliminarestudiante = async (req,res) =>{
+export const eliminarprofesor = async (req,res) =>{
 
     try{    
 
-       await Models.destroy({
+       await ModeloProfesores.destroy({
            where: {id:req.params.id}
        })
         res.json({
@@ -84,3 +80,4 @@ export const eliminarestudiante = async (req,res) =>{
 }
 
 }
+

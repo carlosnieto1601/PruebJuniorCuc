@@ -1,5 +1,5 @@
 import express from 'express'
-import { actualizarestudiante, crearestudiante, eliminarestudiante, getAllestudiante, getAllestudiantes } from '../controllers/controllers.js'
+import { actualizarestudiante, crearestudiante, eliminarestudiante, getAllestudiante, getAllestudiantes } from '../controllers/Estudiantes.js'
 
 const routes = express.Router()
 

@@ -32,11 +32,12 @@ const CrearEstudiantes = () => {
             <div className="col-11">
             <h1> Crear Estudiante </h1>
             
-        <form onSubmit={guardar} className="boreder" >
+        <form onSubmit={guardar} >
             <div>
             <div className='col-6 mb-4'>
-                <label className="mb-3"> Nombre </label>
+                <label htmlFor="nombre" className="mb-3"> Nombre </label>
                  <input 
+                    id="nombre"
                     value={nombre}
                     onChange= {(e) => setnombre(e.target.value)}
                     type='text'
@@ -46,8 +47,9 @@ const CrearEstudiantes = () => {
                  /> 
                  </div>
                  <div className='col-6 mb-3'>
-                <label className="mb-3"> Apellido </label>
+                <label htmlFor='apellido' className='mb-3'> Apellido </label>
                  <input 
+                     id='apellido'
                     value={apellido}
                     onChange= {(e) => setapellido(e.target.value)}
                     type='text'
@@ -57,8 +59,9 @@ const CrearEstudiantes = () => {
                  /> 
                  </div>
                  <div className='col-6 mb-3'>
-                <label className="mb-3"> Numero de Identificacion </label>
+                <label htmlFor='cedula' className='mb-3'> Numero de Identificacion </label>
                  <input 
+                     id='cedula'
                     value={cedula}
                     onChange= {(e) => setcedula(e.target.value)}
                     type='text'
@@ -68,8 +71,9 @@ const CrearEstudiantes = () => {
                  /> 
                  </div>
                  <div className='col-6 mb-3'>
-                <label  className="mb-3"> Correo Electronico </label>
+                <label htmlFor="correo" className='mb-3'> Correo Electronico </label>
                  <input 
+                     id='correo'
                     value={correo}
                     onChange= {(e) => setcorreo(e.target.value)}
                     type='email'
@@ -79,8 +83,9 @@ const CrearEstudiantes = () => {
                  /> 
                  </div>
                  <div className='col-6 mb-3'>
-                <label className="mb-3"> Programa Academico </label>
+                <label htmlFor='programa' className='mb-3'> Programa Academico </label>
                  <input 
+                     id='programa'
                     value={programaacademico}
                     onChange= {(e) => setprogramaacademico(e.target.value)}
                     type='text'

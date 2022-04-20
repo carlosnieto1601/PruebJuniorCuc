@@ -4,7 +4,7 @@ import { DataTypes } from 'sequelize'
 
 
 
-const Models = db.define('estudiantes', {
+const ModelsEstudiantes = db.define('estudiantes', {
 
     nombre: {type: DataTypes.STRING},
     apellido: {type: DataTypes.STRING},
@@ -13,4 +13,4 @@ const Models = db.define('estudiantes', {
     programaacademico: {type: DataTypes.STRING}
 })
 
-export default Models;
+export default ModelsEstudiantes;
